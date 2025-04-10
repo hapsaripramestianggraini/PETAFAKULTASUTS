@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <style>
+        #map {
+            width : 1900px; 
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map',{
+            center: [-7.79558, 110.36949],
+            zoom: 12
+        });
+        L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+
+        var marker2 = L.marker([-7.766126527986148, 110.37399507658957])
+  .bindPopup('<h3>Fakultas Teknik</h3><img src="TEKNIK.jpg" alt="Fakultas Teknik" width="200px"><br><a href="https://ft.ugm.ac.id/" target="_blank">Lihat Gambar</a>')
+  .addTo(map);
+
+        var marker2 = L.marker([-7.769354555407279, 110.37422179196675])
+  .bindPopup('<h3>Fakultas Kedokteran</h3><img src="KEDOKTERAN.jpg" alt="Fakultas Teknik" width="200px"><br><a href="KEDOKTERAN.jpg" target="_blank">Lihat Gambar</a>')
+  .addTo(map);
+
+         var marker2 = L.marker([-7.771326874912719, 110.38092003114937])
+  .bindPopup('<h3>Fakultas Filsafat</h3><img src="FILSAFAT.jpg" alt="Fakultas Teknik" width="200px"><br><a href="FILSAFAT.jpg" target="_blank">Lihat Gambar</a>')
+  .addTo(map);
+
+        var marker2 = L.marker([-7.770461141671766, 110.38110769691505])
+  .bindPopup('<h3>Fakultas Hukum</h3><img src="HUKUM.jpg" alt="Fakultas Teknik" width="200px"><br><a href="FT.jpg" target="_blank">Lihat Gambar</a>')
+  .addTo(map);
+
+         var marker2 = L.marker([-7.772306099462642, 110.37989884956556])
+  .bindPopup('<h3>Fakultas Psikologi</h3><img src="PSIKOLOGI.jpg" alt="Fakultas Psikologi" width="200px"><br><a href="https://ft.ugm.ac.id/" target="_blank">Lihat Gambar</a>')
+  .addTo(map);
+
+
+    </script>
+</body>
+</html>
